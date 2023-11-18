@@ -1,0 +1,33 @@
+nav {
+  background-color: #343a40;
+  padding: 10px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(234, 224, 224);
+
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: "circular";
+}
+
+a:hover {
+  color: antiquewhite;
+}
+
+@media only screen and (max-width: 400px) {
+  ul {
+    flex-direction: column;
+  }
+}

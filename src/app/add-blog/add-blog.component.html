@@ -1,0 +1,60 @@
+<form #blogForm="ngForm" (ngSubmit)="onSubmit(blogForm)" class="mt-3">
+  <div class="mb-3">
+    <label for="title" class="form-label">Blog Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      placeholder="Title"
+      [(ngModel)]="blogForm.value.title"
+      required
+      #title="ngModel"
+    />
+    <span *ngIf="title.touched && title.invalid" class="error"
+      >Please enter blog title</span
+    >
+  </div>
+
+  <div class="mb-3">
+    <label for="text" class="form-label">Blog Text</label>
+    <textarea
+      class="form-control"
+      id="text"
+      name="text"
+      placeholder="Text"
+      [(ngModel)]="blogForm.value.text"
+      required
+      #text="ngModel"
+    ></textarea>
+
+    <span *ngIf="text.touched && text.invalid" class="error"
+      >Please enter blog text</span
+    >
+  </div>
+
+  <div class="mb-3">
+    <label for="author" class="form-label">Blog Author</label>
+    <input
+      type="text"
+      class="form-control"
+      id="author"
+      name="author"
+      placeholder="Author"
+      [(ngModel)]="blogForm.value.author"
+      required
+      #author="ngModel"
+    />
+    <span *ngIf="author.touched && author.invalid" class="error"
+      >Please enter author name</span
+    >
+  </div>
+
+  <button
+    [disabled]="blogForm.invalid"
+    type="submit"
+    class="btn btn-primary mb-3"
+  >
+    Submit
+  </button>
+</form>

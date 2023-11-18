@@ -1,0 +1,55 @@
+<form #blogForm="ngForm" (ngSubmit)="editBlog(blogForm)">
+  <div class="mb-3">
+    <label for="title" class="form-label">Blog Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      placeholder="Title"
+      [(ngModel)]="title"
+      #titleModel="ngModel"
+      required
+    />
+
+    <span *ngIf="titleModel.invalid" class="error"
+      >Please enter a blog title</span
+    >
+  </div>
+
+  <div class="mb-3">
+    <label for="text" class="form-label">Blog Text</label>
+    <textarea
+      class="form-control"
+      id="text"
+      name="text"
+      placeholder="Text"
+      [(ngModel)]="text"
+      #textModel="ngModel"
+      required
+    ></textarea>
+
+    <span *ngIf="textModel.invalid" class="error"
+      >Please enter a blog text</span
+    >
+  </div>
+
+  <div class="mb-3">
+    <label for="author" class="form-label">Blog Author</label>
+    <input
+      type="text"
+      class="form-control"
+      id="author"
+      name="author"
+      placeholder="Author"
+      [(ngModel)]="author"
+      #authorModel="ngModel"
+      required
+    />
+    <span *ngIf="authorModel.invalid" class="error"
+      >Please enter author name</span
+    >
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

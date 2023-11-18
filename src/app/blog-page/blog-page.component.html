@@ -1,0 +1,23 @@
+<div class="main">
+  <div class="card w-50">
+    <div class="card-body">
+      <h1>Id {{ blog.id }}</h1>
+      <div class="card-top">
+        <div class="title">
+          <strong>Title </strong>
+          <span class="title-text"> {{ blog.title }}</span>
+        </div>
+        <span class="author"
+          ><i class="fa-solid fa-user"></i> {{ blog.author }}</span
+        >
+      </div>
+
+      <p class="card-text">
+        <strong class="static-text">Text </strong> {{ blog.text }}
+      </p>
+      <div class="actions">
+        <a routerLink="/" class="btn btn-dark">Home</a>
+      </div>
+    </div>
+  </div>
+</div>

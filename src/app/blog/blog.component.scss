@@ -1,0 +1,54 @@
+.card {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-top {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  // justify-content: space-around;
+  // align-items: center;
+  font-family: Wellfleet;
+}
+.title {
+  margin-right: auto;
+  font-size: 1.7rem;
+}
+
+.title-text {
+  font-size: 1.2rem;
+}
+
+.author {
+  margin-left: auto;
+  align-self: center;
+  font-size: 1.2rem;
+}
+
+.static-text {
+  font-size: 1.5rem;
+}
+.card-text {
+  font-family: "GFS Neohellenic", sans-serif;
+  justify-self: start;
+  align-self: flex-start;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 100% !important;
+  }
+}
